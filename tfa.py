@@ -13,7 +13,7 @@ for line in logs:
             avgs[r] += [t - rooms[key][1] + 1]
         else:
             avgs[r] = [t - rooms[key][1] + 1]
-
+logs.close()
 for room in sorted(avgs.keys()):
     if len(avgs[room]) > 1:
         print "Room", room, "-", sum(avgs[room]) / len(avgs[room]), "minute average visit,", len(avgs[room]), "visitors total."
